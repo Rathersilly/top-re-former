@@ -1,0 +1,36 @@
+hey whats up
+<% if @user.errors.any? %>
+  <h3>This form contains <%= @user.errors.count %> errors</h3>
+  <% @user.errors.full_messages.each do |m| %>
+    <h5><%= m %></h5>
+  <% end  %>
+<% end  %>
+<h3>Standard style form</h3>
+<form action="/users" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Username: </label>
+  <input type="text" name="user[username]" placeholder="hey put username here" value=''><br>
+  <label>Email: </label>
+  <input type="text" name="user[email]" placeholder="hey put email here" value=''><br>
+  <label>Password: </label>
+  <input type="password" name="user[password]"><br>
+  <label>Password confirmation: </label>
+  <input type="password" name="user[password_confirmation]"><br>
+  <label>Would you like to donate your sanity to the Old Ones?</label>
+  <input type="checkbox" name="sanitycheck" checked></input><br>
+  <input type="submit" value="Create new user" ><br>
+</form>
+<h3>Rails style form</h3>
+<%= form_with(model: @user) do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %><br>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br>
+  <%= f.submit "Create new user" %>
+
+<% end %>
+
