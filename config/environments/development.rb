@@ -6,6 +6,31 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+ 
+  # ** lets try and find out where logging stuff goes
+  class TeeIO < IO
+    def initialize(orig, alt)
+      @orig = orig
+      @alt = alt
+    end
+    def write(str)
+      @orig.write(str)
+      @alt.write(str)
+    end
+  end
+
+  log_stdout = TeeIO.new($stdout, File.new('log/stdoutlog.txt', 'a'))
+  log_stderr = TeeIO.new($stderr, File.new('log/stderrlog.txt', 'a'))
+  # STDOUT = log_stdout
+
+  config.this_log = Logger.new(log_stdout)
+  config.err_log = Logger.new(log_stderr)
+  config.this_log.info("ok maybe this info will work")
+  config.this_log.warn("ok maybe this warn will work")
+  log_stdout.write("uh hey there") 
+  $stderr.puts "hello error place"
+  config.err_log.warn("ok maysdfhjksdhfkdshjfkdshfjkdsbe this warn will work")
+  
   config.cache_classes = false
 
   # Do not eager load code on boot.

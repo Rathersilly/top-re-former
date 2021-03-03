@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <% flash.each do |msg_type, msg| %>
+      <%= content_tag(:div, msg, class: "alert") %>
+      <%= content_tag(:div, msg + " " + msg_type, class: "alert") %>
+      <p><%=msg_type.inspect %> - <%=p msg %> </p>
+    <% end %>
     <%= yield %>
+    <%= params.inspect %>
+    <%= p params %>
+    <%= puts "hey man whats up" %>
+    <%= $stderr.puts "hey ERROR ERROR ERROR" %>
   </body>
 </html>

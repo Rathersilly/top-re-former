@@ -1,0 +1,25 @@
+I, [2021-03-03T12:41:51.677915 #4627]  INFO -- : ok maybe this info will work
+W, [2021-03-03T12:41:51.678026 #4627]  WARN -- : ok maybe this warn will work
+uh hey therePuma starting in single mode...
+Exiting
+I, [2021-03-03T12:41:39.364844 #4615]  INFO -- : ok maybe this info will work
+W, [2021-03-03T12:41:39.365028 #4615]  WARN -- : ok maybe this warn will work
+uh hey thereI, [2021-03-03T12:48:22.342571 #4759]  INFO -- : ok maybe this info will work
+W, [2021-03-03T12:48:22.342725 #4759]  WARN -- : ok maybe this warn will work
+uh hey thereI, [2021-03-03T12:48:15.774410 #4744]  INFO -- : ok maybe this info will work
+W, [2021-03-03T12:48:15.774670 #4744]  WARN -- : ok maybe this warn will work
+uh hey thereI, [2021-03-03T13:04:45.116743 #5415]  INFO -- : ok maybe this info will work
+W, [2021-03-03T13:04:45.116882 #5415]  WARN -- : ok maybe this warn will work
+uh hey therePuma starting in single mode...
+Exiting
+I, [2021-03-03T13:04:38.864132 #5404]  INFO -- : ok maybe this info will work
+W, [2021-03-03T13:04:38.864500 #5404]  WARN -- : ok maybe this warn will work
+uh hey thereI, [2021-03-03T13:06:48.398841 #5459]  INFO -- : ok maybe this info will work
+W, [2021-03-03T13:06:48.398979 #5459]  WARN -- : ok maybe this warn will work
+uh hey thereI, [2021-03-03T13:06:51.790109 #5467]  INFO -- : ok maybe this info will work
+W, [2021-03-03T13:06:51.790323 #5467]  WARN -- : ok maybe this warn will work
+uh hey thereI, [2021-03-03T13:08:20.045711 #5517]  INFO -- : ok maybe this info will work
+W, [2021-03-03T13:08:20.045822 #5517]  WARN -- : ok maybe this warn will work
+uh hey thereI, [2021-03-03T13:09:29.941816 #5577]  INFO -- : ok maybe this info will work
+W, [2021-03-03T13:09:29.941936 #5577]  WARN -- : ok maybe this warn will work
+uh hey there
